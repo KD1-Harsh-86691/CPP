@@ -10,7 +10,7 @@ int menu()
 {
     int choice;
     cout<<"0 : Exit "<<endl;
-    cout<<"1 : Enter Details of student "<<endl;
+    cout<<"1 : Enter Details of Student "<<endl;
     cin>>choice;
     return choice; 
 }
@@ -25,7 +25,7 @@ namespace NStudent
         string name;
         int marks;
 
-        void initStudent(int a=0,string s="",int c=0)          // initializing data
+        void initStudent()         
         {
             rollno = 0;
             name = "";
