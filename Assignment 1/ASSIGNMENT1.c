@@ -19,6 +19,13 @@ struct Date{
     {
         printf("Time = %d  %d  %d",ptr->day,ptr->month,ptr->year);
     }
+    
+    void initDate(struct Date* ptr) 
+	{
+	    ptr->day = 1;
+	    ptr->month = 1;
+	    ptr->year = 2000;
+    }
 
     int menu()
     {
@@ -26,6 +33,7 @@ struct Date{
         printf("\n0 for exit..\n");
         printf("1 for add date\n");
         printf("2 for display date\n");
+        printf("3 for default date\n");
         printf("Enter your choice ");
         scanf("%d",&choice);
         return choice;
@@ -43,6 +51,10 @@ int main()
                 acceptDate(&t1);
                 break;
             case 2:
+                displayDate(&t1);
+                break;
+            case 3:
+                initDate(&t1);
                 displayDate(&t1);
                 break;
             default:
